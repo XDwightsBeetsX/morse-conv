@@ -1,0 +1,59 @@
+/* INDEX STYLES */
+.content-headers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    width: 100%;
+    height: auto;
+}
+.content-headers > h2 {
+    font-family: Arial;
+}
+
+
+#index-cols {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    width: 100%;
+    height: auto;
+}
+#index-cols > .txt-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 46%;
+    height: 100%;
+
+    padding: 5px;
+}
+#index-cols > .txt-col > textarea {
+    min-height: 200px;
+    max-height: 300px;
+    min-width: 100%;
+    max-width: 100%;
+}
+#index-cols > .mid-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 8%;
+    height: auto;
+}
+
+#index-cols > .mid-col > #mid-arr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+}
+#index-cols > .mid-col > #mid-arr > img {
+    width: 100%;
+    height: auto;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+    <title>Morse Code Converter</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="./css/shared.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <script src="./js/index.js"></script>
+</head>
+
+<body>
+    <div class="page-header color-light-blue rounded5">
+        <h1 class="center-span arial">Morse Code Converter</h1>
+    </div>
+
+    <div class="page-content">
+        <div class="content-headers">
+            <h2>Input</h2>
+            <h2>Output</h2>
+        </div>
+
+        <div id="index-cols">
+            <div class="txt-col">
+                <textarea id="input" class="rounded5" oninput='this.style.height = "";this.style.height = this.scrollHeight + 5 + "px"'></textarea>
+            </div>
+
+            <div class="mid-col">
+                <a id="mid-arr">
+                    <img src="img/convert_arrow.png">
+                </a>
+            </div>
+
+            <div class="txt-col">
+                <textarea id="output" class="rounded5" oninput='this.style.height = "";this.style.height = this.scrollHeight + 5 + "px"'></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer class="page-footer color-light-blue rounded5">
+    <div class="center-span footer-icons">
+        <a href="https://github.com/XDwightsBeetsX/morse-conv" target="_blank">
+            <img src="img/github_icon.png">
+        </a>
+    </div>
+</footer>
