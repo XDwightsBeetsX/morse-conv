@@ -44,7 +44,6 @@
     width: 8%;
     height: auto;
 }
-
 #index-cols > .mid-col > #mid-arr {
     display: flex;
     flex-direction: column;
@@ -56,4 +55,28 @@
 #index-cols > .mid-col > #mid-arr > img {
     width: 100%;
     height: auto;
+
+    filter: brightness(90%);
+}
+#index-cols > .mid-col > #mid-arr > img:hover {
+    cursor: pointer;
+    filter: brightness(10%);
+}
+
+
+#description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    width: 100%;
+    min-height: 40px;
+}
+#description {
+    width: 100%;
+    margin: 0;
+    padding: 5px 0px 5px 10%;
+
+    font-family: Arial;
+    font-size: 16px;
 }

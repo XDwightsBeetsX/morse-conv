@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="./css/shared.css">
     <link rel="stylesheet" href="./css/index.css">
 
+    <script src="./js/globals.js"></script>
+    <script src="./js/event_listeners.js"></script>
+    <script src="./js/conversions.js"></script>
     <script src="./js/index.js"></script>
 </head>
 
@@ -30,13 +33,27 @@
 
             <div class="mid-col">
                 <a id="mid-arr">
-                    <img src="img/convert_arrow.png">
+                    <img id="convert_arrow" onclick="convert()" src="img/convert_arrow.png">
                 </a>
             </div>
 
             <div class="txt-col">
                 <textarea id="output" class="rounded5" oninput='this.style.height = "";this.style.height = this.scrollHeight + 5 + "px"'></textarea>
             </div>
+        </div>
+
+        <div id="description" class="center-span">
+            <ul>
+                <li>
+                    This converter supports alphanumeric inputs with some symbols: [' ', '.', ',', '?', '!', ':', ';', ''', '$']
+                </li>
+                <li>
+                    Any unknown conversions will be shown by '#'.
+                </li>
+                <li>
+                    If you would like to add or suggest new symbol support, see the conversions rules <a href="https://github.com/XDwightsBeetsX/morse-conv/blob/master/js/conversions.js" target="_blank">here</a> or view the github repo with the link at the page bottom.
+                </li>
+            </ul>
         </div>
     </div>
 </body>
