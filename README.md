@@ -1,10 +1,9 @@
 # Morse Code Converter
 
-![example.png](./img/example.png)
+[![example.png](./img/example.png)](https://xdwightsbeetsx.github.io/morse-conv/)
 
-- Convert English to Morse Code
 - Check out the website [here](https://xdwightsbeetsx.github.io/morse-conv/)
-- Update supported symbols [here](https://github.com/XDwightsBeetsX/morse-conv/blob/master/js/conversions.js)
+- Supported symbols set [here](https://github.com/XDwightsBeetsX/morse-conv/blob/master/js/conversions.js)
 
 ## Character Support
 
