@@ -86,6 +86,8 @@ function getMorseFromChar(char) {
         case ',':
             return DASH+DASH+DOT+DOT+DASH+DASH;
         case '!':
+            return DASH+DOT+DASH+DOT+DASH+DASH;
+        case '?':
             return DOT+DOT+DASH+DASH+DOT+DOT;
         case ':':
             return DASH+DASH+DASH+DOT+DOT+DOT;
@@ -93,8 +95,20 @@ function getMorseFromChar(char) {
             return DOT+DASH+DASH+DASH+DASH+DOT;
         case ';':
             return DASH+DOT+DASH+DOT+DASH+DOT;
+        
+        // CURR
         case '$':
             return DOT+DOT+DOT+DASH+DOT+DOT+DASH;
+        
+        // MATH
+        case '+':
+            return DOT+DASH+DOT+DASH+DOT;
+        case '-':
+            return DASH+DOT+DOT+DOT+DOT+DASH;
+        case '/':
+            return DASH+DOT+DOT+DASH+DOT;
+        case '=':
+            return DASH+DOT+DOT+DOT+DASH;
         
         // DEF
         default:
