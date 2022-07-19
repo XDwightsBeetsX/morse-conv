@@ -1,34 +1,49 @@
 
+function encodeEnglish() {
+	let englishE = document.getElementById(ID_ENGLISH_BOX);
+	let english = englishE.value;
 
-function getInput() {
-    let inputE = document.getElementById(ID_INPUT_BOX);
-    return inputE.value;
+	let morse = "";  // init
+
+	// encode english words
+	let englishWords = english.split(' ');
+	let wordNum = 1;
+	let numWords = englishWords.length;
+	englishWords.forEach(englishWord => {
+		let englishLetters = englishWord.split('');
+		englishLetters.forEach(englishLetter => {
+			let morseLetter = getMorseFromChar(englishLetter);
+			morse += morseLetter + CHAR_SEP;
+		});
+		if (wordNum < numWords) {
+			morse += WORD_SEP;
+		}
+		wordNum++;
+	});
+
+	let morseE = document.getElementById(ID_MORSE_BOX);
+	morseE.value = morse;
+
+	console.log("encoded '" + english + "' --> " + morse);
 }
 
+function decodeMorse() {
+	let morseE = document.getElementById(ID_MORSE_BOX);
+	let morse = morseE.value;
 
-function getOutput(input) {
-    output = "";
-    l = input.length;
-    for (let i = 0; i < l; i++) {
-        m = getMorseFromChar(input.charAt(i));
-        if (i != l-1) {
-            output += m + CHAR_SEP;
-        }
-    }
+	let english = "";  // init
+	let morseWords = morse.split(WORD_SEP);
+	morseWords.forEach(morseWord => {
+		let morseLetters = morseWord.split(CHAR_SEP);
+		morseLetters.forEach(morseLetter => {
+			char = getCharFromMorse(morseLetter);
+			english += char;
+		});
+		english += " ";  // spaces bw words
+	});
 
-    return output;
-}
+	let englishE = document.getElementById(ID_ENGLISH_BOX);
+	englishE.value = english;
 
-
-function convert() {
-    console.log("converting...");
-
-    let input = getInput();
-    console.log("got input: '" + input + "'");
-
-    let output = getOutput(input);
-    console.log("got output: '" + output + "'");
-
-    let outputE = document.getElementById(ID_OUTPUT_BOX);
-    outputE.value = output;
+	console.log("decoded " + morse + " --> " + "'" + english + "'");
 }

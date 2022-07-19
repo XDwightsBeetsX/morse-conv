@@ -55,6 +55,7 @@
 #index-cols > .mid-col > #mid-arr > img {
     width: 100%;
     height: auto;
+    margin: 10px 0 10px 0;
 
     filter: brightness(90%);
 }
