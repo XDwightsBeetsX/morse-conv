@@ -1,10 +1,9 @@
 /* GLOBAL VARIABLES */
+ID_ENGLISH_BOX = "english";
+ID_MORSE_BOX = "morse";
 
-ID_INPUT_BOX = "input";
-ID_OUTPUT_BOX = "output";
-
-ID_ARROW = "convert_arrow";
-
+ID_ENCODE = "encode_arrow";
+ID_DECODE = "decode_arrow";
 
 /* CONVERSION */
 CHAR_SEP = ' ';

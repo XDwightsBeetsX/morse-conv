@@ -26,7 +26,7 @@ function getMorseFromChar(char) {
         case 'k':
             return DASH+DOT+DASH;
         case 'l':
-            return DOT+DOT;
+            return DOT+DASH+DOT+DOT;
         case 'm':
             return DASH+DASH;
         case 'n':
@@ -79,8 +79,6 @@ function getMorseFromChar(char) {
             return DASH+DASH+DASH+DASH+DOT;
         
         // SYM
-        case ' ':
-            return WORD_SEP;
         case '.':
             return DOT+DASH+DOT+DASH+DOT+DASH;
         case ',':
@@ -110,8 +108,77 @@ function getMorseFromChar(char) {
         case '=':
             return DASH+DOT+DOT+DOT+DASH;
         
+        // CATCHES
+        case '':
+            return '';
+        
         // DEF
         default:
             return '#';
     }
+}
+
+function getCharFromMorse(morseLetter) {
+    // ALPHA
+    if (morseLetter == (DOT+DASH)) return 'a';
+    if (morseLetter == (DASH+DOT+DOT+DOT)) return 'b';
+    if (morseLetter == (DASH+DOT+DASH+DOT)) return 'c';
+    if (morseLetter == (DASH+DOT+DOT)) return 'd';
+    if (morseLetter == (DOT)) return 'e';
+    if (morseLetter == (DOT+DOT+DASH+DOT)) return 'f';
+    if (morseLetter == (DASH+DASH+DOT)) return 'g';
+    if (morseLetter == (DOT+DOT+DOT+DOT)) return 'h';
+    if (morseLetter == (DOT+DOT)) return 'i';
+    if (morseLetter == (DOT+DASH+DASH+DASH)) return 'j';
+    if (morseLetter == (DASH+DOT+DASH)) return 'k';
+    if (morseLetter == (DOT+DASH+DOT+DOT)) return 'l';
+    if (morseLetter == (DASH+DASH)) return 'm';
+    if (morseLetter == (DASH+DOT)) return 'n';
+    if (morseLetter == (DASH+DASH+DASH)) return 'o';
+    if (morseLetter == (DOT+DASH+DASH+DOT)) return 'p';
+    if (morseLetter == (DASH+DASH+DOT+DASH)) return 'q';
+    if (morseLetter == (DOT+DASH+DOT+DASH)) return 'r';
+    if (morseLetter == (DOT+DOT+DOT)) return 's';
+    if (morseLetter == (DASH)) return 't';
+    if (morseLetter == (DOT+DOT+DASH)) return 'u';
+    if (morseLetter == (DOT+DOT+DOT+DASH)) return 'v';
+    if (morseLetter == (DOT+DASH+DASH)) return 'w';
+    if (morseLetter == (DASH+DOT+DOT+DASH)) return 'x';
+    if (morseLetter == (DASH+DOT+DASH+DASH)) return 'y';
+    if (morseLetter == (DASH+DASH+DOT+DOT)) return 'z';
+    
+    // NUM
+    if (morseLetter == (DASH+DASH+DASH+DASH+DASH)) return '0';
+    if (morseLetter == (DOT+DASH+DASH+DASH+DASH)) return '1';
+    if (morseLetter == (DOT+DOT+DASH+DASH+DASH)) return '2';
+    if (morseLetter == (DOT+DOT+DOT+DASH+DASH)) return '3';
+    if (morseLetter == (DOT+DOT+DOT+DOT+DASH)) return '4';
+    if (morseLetter == (DOT+DOT+DOT+DOT+DOT)) return '5';
+    if (morseLetter == (DASH+DOT+DOT+DOT+DOT)) return '6';
+    if (morseLetter == (DASH+DASH+DOT+DOT+DOT)) return '7';
+    if (morseLetter == (DASH+DASH+DASH+DOT+DOT)) return '8';
+    if (morseLetter == (DASH+DASH+DASH+DASH+DOT)) return '9';
+    
+    // SYM
+    if (morseLetter == (DOT+DASH+DOT+DASH+DOT+DASH)) return '.';
+    if (morseLetter == (DASH+DASH+DOT+DOT+DASH+DASH)) return ',';
+    if (morseLetter == (DASH+DOT+DASH+DOT+DASH+DASH)) return '!';
+    if (morseLetter == (DOT+DOT+DASH+DASH+DOT+DOT)) return '?';
+    if (morseLetter == (DASH+DASH+DASH+DOT+DOT+DOT)) return ':';
+    if (morseLetter == (DOT+DASH+DASH+DASH+DASH+DOT)) return "'";
+    if (morseLetter == (DASH+DOT+DASH+DOT+DASH+DOT)) return ';';
+    
+    // CURR
+    if (morseLetter == (DOT+DOT+DOT+DASH+DOT+DOT+DASH)) return '$';
+    
+    // MATH
+    if (morseLetter == (DOT+DASH+DOT+DASH+DOT)) return '+';
+    if (morseLetter == (DASH+DOT+DOT+DOT+DOT+DASH)) return '-';
+    if (morseLetter == (DASH+DOT+DOT+DASH+DOT)) return '/';
+    if (morseLetter == (DASH+DOT+DOT+DOT+DASH)) return '=';
+    
+    // CATCHES
+    if (morseLetter == '') return '';
+    // DEF
+    else return '#';
 }
